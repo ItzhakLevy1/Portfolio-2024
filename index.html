@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="app.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://kit.fontawesome.com/252af1c3af.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="sliderStiles.css"> -->
+  <title>My Website</title>
+</head>
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero"><h1><span>I</span>tzhak <span>L</span>evy</h1></a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger"><div class="bar"></div></div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <!-- <li><a href="#services" data-after="Service">Services</a></li> -->
+            <li><a href="#projects" data-after="Projects">Projects</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+
+  <!-- Hero Section  -->
+  <section id="hero">
+      </div>
+    <div class="hero container">
+      <div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h1 style="font-size: xx-large; font-size: 500%;"><b> Hello, My Name is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b  style="color: rgb(255, 187, 0);">Itzhak Levy</b>.</b><span></span>
+          <!-- I'm a self taught developer. --> </h1>
+          <img style="border-radius: 10%; max-width: 30%; float:right; margin-top: 20%;" src="/images/myProfilePicture.jpg" alt="img">
+          <br />
+          <br />
+          <br />
+            <br />
+            <br />
+            <br />
+            <h1 style="font-size: x-large; ">SKILLS:</h1>
+            <br/>
+            <br />
+            <br />
+            
+            <p style="font-size: large; color: white;">
+                HTML, CSS <br>
+                Javascript / ES6<br>
+                MERN STACK - MongoDB, Express, React, Node<br>
+                jQuery<br>
+                Java<br>
+                Python<br>
+                Backend REST API<br>
+                Data management with MongoDB , JSON, AJAX, XML<br>
+                Chrome Extensions<br>
+                Command line / npm<br>
+                Github<br>
+                Wordpress</p>
+                
+        <!-- <h1>My Name is <span></span></h1>
+        <h1>c <span></span></h1> -->
+        <a href="#projects" type="button" class="cta">projects</a>
+      </div>
+    </div>
+    
+  </section>
+  <!-- End Hero Section  -->
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="projects container">
+
+      
+    <div class="slider">
+
+
+      <div class="list">
+
+          <div class="item">
+              <img src="./images/hotel/1 new (1).jpeg" alt="">
+ 
+              <div class="content">
+                  <!-- <div class="title">MAGIC SLIDER</div> -->
+                  <div class="type">Hotel Management System</div>
+                  <div class="description">
+                    Tach Stack : Spring Boot, React, MongoDB, AWS
+                  </div>
+                  <div class="button">
+                      <button>WATCH DEMO</button>
+                      <button>VIEW CODE</button>
+                  </div>
+              </div>
+          </div>
+
+          <div class="item">
+              <img src="./images/hotel/2 new.jpg" alt="">
+
+              <div class="content">
+                  <!-- <div class="title">MAGIC SLIDER</div> -->
+                  <div class="type">Second Project Example</div>
+                  <div class="description">
+                      Several technologies that specify the tach stack.
+                  </div>
+                  <div class="button">
+                    <button>WATCH DEMO</button>
+                    <button>VIEW CODE</button>
+                </div>
+              </div>
+          </div>
+
+          <div class="item">
+              <img src="./images/hotel/3.jpg" alt="">
+
+              <div class="content">
+                  <!-- <div class="title">MAGIC SLIDER</div> -->
+                  <div class="type">Third Project Example</div>
+                  <div class="description">
+                    Several technologies that specify the tach stack.
+                  </div>
+                  <div class="button">
+                    <button>WATCH DEMO</button>
+                    <button>VIEW CODE</button>
+                </div>
+              </div>
+          </div>
+
+          <div class="item">
+              <img src="./images/hotel/4.jpg" alt="">
+
+              <div class="content">
+                  <!-- <div class="title">MAGIC SLIDER</div> -->
+                  <div class="type">Forth Project Example</div>
+                  <div class="description">
+                    Several technologies that specify the tach stack.
+                  </div>
+                  <div class="button">
+                    <button>WATCH DEMO</button>
+                    <button>VIEW CODE</button>
+                </div>
+              </div>
+          </div>
+      </div>
+      <div class="thumbnail">
+
+          <div class="item">
+              <img src="./images/hotel/1.jpg" alt="">
+          </div>
+          <div class="item">
+              <img src="./images/hotel/2.jpg" alt="">
+          </div>
+          <div class="item">
+              <img src="./images/hotel/3.jpg" alt="">
+          </div>
+          <div class="item">
+              <img src="./images/hotel/4.jpg" alt="">
+          </div>
+      </div>
+      <div class="nextPrevArrows">
+          <button class="prev" onclick="prevSlide()"> &#8678; </button>
+          <button class="next" onclick="nextSlide()"> &#8680; </button>
+      </div>
+  </div>
+      </div>
+  </section>
+  <!-- End Projects Section -->
+   
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="contact container">
+      <section id="contact">
+  
+          <h1 class="section-header">CON<span style="color: rgb(255, 187, 0);">T</span>ACT</h1>
+          
+          <div class="contact-wrapper">
+            
+              <!---------------- 
+        
+              CONTACT PAGE LEFT 
+            
+              -----------------> 
+            
+            <form class="form-horizontal" role="form" method="post" action="contact.php" data-netlify="true">
+               
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <input style="width: 400px; margin: 1%; height: 40px;border-radius: 5px; border: solid gray 2px; padding: 10px;" type="text" class="form-control" id="name" placeholder="NAME" name="name" value="">
+                </div>
+              </div>
+        
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <input  style="width: 400px; margin: 1%; height: 40px; border-radius: 5px; border: solid gray 2px; padding: 10px;" type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="">
+                </div>
+              </div>
+        
+              <textarea  style="width: 400px; margin: 1%; border-radius: 5px; padding: 10px; border: solid gray 2px;" class="form-control" rows="10" placeholder="MESSAGE" name="message"></textarea>
+              
+              <button style="margin: 1%; border-radius: 10px;" class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                <div class="button">
+                  <i class="fa fa-paper-plane"><br></i><span class="send-text" style="margin-left: 10px;">SEND</span>
+                </div>
+              
+              </button>
+              
+            </form>
+            
+              <!---------------- 
+        
+              CONTACT PAGE RIGHT 
+            
+              -----------------> 
+            
+              <div class="direct-contact-container">
+        
+                <ul class="contact-list">
+                  <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Central district | Israel</span></i></li>
+                  
+                  <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:0544300508" title="Give me a call">0544300508</a></span></i></li>
+                  
+                  <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">Itzhaklevydev@gmail.com</a></span></i></li>
+                  
+                </ul>
+        
+                <hr>
+                <ul class="social-media-list">
+
+                  <li onclick="goToGithub()"><a onclick="goToGithub()" target="_blank" class="contact-icon">
+                    <i class="fa fa-github" aria-hidden="true"></i></a>
+                  </li>
+
+                  <!-- <li onclick="goToCodeSandBox()"><a onclick="goToCodeSandBox()" target="_blank" class="contact-icon">
+                    <i class="fa fa-square"></i></a>
+                  </li> -->
+
+                  <li onclick="goToLinkedin()"><a onclick="goToLinkedin()" target="_blank" class="contact-icon">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                  </li>
+                  <!-- <li onclick="goToCodePen()"><a target="_blank" class="contact-icon">
+                    <i class="fa fa-codepen" aria-hidden="true"></i></a> 
+                  </li> -->
+                </ul>
+                <hr>
+                <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+              </div>
+          </div>
+</section>  
+      </div>
+    </section>
+    <!-- End Contact Section -->
+</div>
+<div class="back-to-top" onclick="topFunction()" id="backToTopBtn" >Back to Top</div>
+</body>
+</html>
