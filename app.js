@@ -1,32 +1,32 @@
-const hamburger = document.querySelector(
-  ".header .nav-bar .nav-list .hamburger"
-);
-const mobile_menu = document.querySelector(".header .nav-bar .nav-list ul");
-const menu_item = document.querySelectorAll(
-  ".header .nav-bar .nav-list ul li a"
-);
-const header = document.querySelector(".header.container");
+// const hamburger = document.querySelector(
+//   ".header .nav-bar .nav-list .hamburger"
+// );
+// const mobile_menu = document.querySelector(".header .nav-bar .nav-list ul");
+// const menu_item = document.querySelectorAll(
+//   ".header .nav-bar .nav-list ul li a"
+// );
+// const header = document.querySelector(".header.container");
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  mobile_menu.classList.toggle("active");
-});
+// hamburger.addEventListener("click", () => {
+//   hamburger.classList.toggle("active");
+//   mobile_menu.classList.toggle("active");
+// });
 
-document.addEventListener("scroll", () => {
-  var scroll_position = window.scrollY;
-  if (scroll_position > 250) {
-    header.style.backgroundColor = "#29323c";
-  } else {
-    header.style.backgroundColor = "transparent";
-  }
-});
+// document.addEventListener("scroll", () => {
+//   var scroll_position = window.scrollY;
+//   if (scroll_position > 250) {
+//     header.style.backgroundColor = "#29323c";
+//   } else {
+//     header.style.backgroundColor = "transparent";
+//   }
+// });
 
-menu_item.forEach((item) => {
-  item.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    mobile_menu.classList.toggle("active");
-  });
-});
+// menu_item.forEach((item) => {
+//   item.addEventListener("click", () => {
+//     hamburger.classList.toggle("active");
+//     mobile_menu.classList.toggle("active");
+//   });
+// });
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -178,3 +178,66 @@ function prevSlide() {
   moveSlider("prev");
 }
 
+/*** Automatic scrolling ***/
+
+// document.addEventListener('wheel', function(event) {
+//   if (event.deltaY > 0) {
+//       scrollDown();
+//   } else {
+//       scrollUp();
+//   }
+// });
+
+// function scrollDown() {
+//   const nextSection = document.querySelector('.section.active').nextElementSibling;
+//   if (nextSection) {
+//       nextSection.scrollIntoView({ behavior: 'smooth' });
+//       document.querySelector('.section.active').classList.remove('active');
+//       nextSection.classList.add('active');
+//   }
+// }
+
+// function scrollUp() {
+//   const prevSection = document.querySelector('.section.active').previousElementSibling;
+//   if (prevSection) {
+//       prevSection.scrollIntoView({ behavior: 'smooth' });
+//       document.querySelector('.section.active').classList.remove('active');
+//       prevSection.classList.add('active');
+//   }
+// }
+
+/*** Positioning of the Back to top button ***/
+document.addEventListener("DOMContentLoaded", () => {
+  const myElement = document.querySelector(".back-to-top");
+  const projectsSection = document.querySelector("#projects");
+
+  console.log("myElement: ", myElement); // Check if it exists
+  console.log("projectsSection: ", projectsSection); // Check if it exists
+
+  if (myElement && projectsSection) {
+    // Create an intersection observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log("User entered the projects section");
+            myElement.style.position = "fixed";
+            myElement.style.bottom = "10px";
+            myElement.style.left = "10px";
+            myElement.style.display = "block"; // Ensure it's visible
+          } else {
+            console.log("User exited the projects section");
+            myElement.style.display = "none";
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Adjust the threshold as needed
+      }
+    );
+
+    observer.observe(projectsSection);
+  } else {
+    console.error("Projects section or back-to-top element not found.");
+  }
+});

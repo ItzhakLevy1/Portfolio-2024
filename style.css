@@ -20,11 +20,6 @@ a {
   align-items: center;
   justify-content: center;
 }
-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
 p {
   color: black;
   font-size: 1.4rem;
@@ -183,7 +178,16 @@ p {
 #header .hamburger.active .bar::after {
   top: 0;
 }
-/* End Header section */
+/*** End Header section ***/
+
+.portfolioImage {
+  border-radius: 10%;
+  max-width: 100%;
+  /* margin: 20px 0; */
+  margin-top: 2rem;
+  max-width: 150px;
+  width: 100%;
+}
 
 #hero {
   /* background-image: url(/images/19362653.jpg); */
@@ -251,6 +255,7 @@ p {
 
 #projects {
   background-color: #111;
+  min-height: 100vh;
 }
 
 /* End Projects section */
@@ -392,10 +397,12 @@ p {
   padding: 1em;
   margin: 1em;
   font-size: 20px;
-  background-color: rgba(85, 85, 85, 0.226);
+  background-color: rgba(255, 255, 255, 0.226);
   border-radius: 10px;
   transition-duration: 0.5s;
   color: white;
+  z-index: 100;
+  font-weight: bolder; /* Makes it bold */
 }
 .back-to-top:hover {
   cursor: pointer;
@@ -460,7 +467,7 @@ p {
   max-width: 800px;
 }
 
-/* Begin Left Contact Page */
+/*Contact Page */
 .form-horizontal {
   float: left;
   max-width: 400px;
@@ -528,15 +535,15 @@ textarea {
 }
 
 .place {
-  margin-left: 62px;
+  margin-left: 32px;
 }
 
 .phone {
-  margin-left: 56px;
+  margin-left: 28px;
 }
 
 .gmail {
-  margin-left: 53px;
+  margin-left: 26px;
 }
 
 .contact-text a {
@@ -711,11 +718,12 @@ hr {
   inset: 0 0 0 0;
 }
 
-/* Image within each slider item */
+/* Full screen image within each slider item */
 .slider .list .item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: brightness(50%);
 }
 
 /* Content container within each slide (e.g., title, description, buttons) */
@@ -1019,11 +1027,16 @@ hr {
 }
 
 @media screen and (max-width: 678px) {
+  .portfolioImage {
+    max-width: 100px;
+    margin-top: 0rem;
+  }
   .slider .list .item .content {
     padding-right: 0;
     left: 0;
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-top: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
     color: ed;
@@ -1031,18 +1044,42 @@ hr {
   }
 
   .back-to-top {
-    margin-bottom: 0.2em;
-    padding-bottom: 0.2em;
-    padding-top: 0.2em;
+    display: none;
   }
 
   .slider .list .item .content .title {
     font-size: 50px;
   }
+
+  .thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid white;
+    margin-top: 3rem;
+  }
+
   .slider .list .item .buttons {
     grid-template-columns: 1fr; /* Change to a single column */
     grid-template-rows: auto; /* Adjust row height automatically */
     width: 130px;
     height: 80px;
+  }
+
+  .nextPrevArrows {
+    margin-right: 3rem;
+    border-color: red;
+  }
+
+  .form-control,
+  textarea {
+    max-width: 98%;
+    margin: 0 auto;
+  }
+
+  #contact {
+    height: 100vh;
   }
 }
