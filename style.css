@@ -758,6 +758,24 @@ hr {
 /* Description text styling */
 .description {
   font-size: 20px;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+/* Description Title text styling */
+.description .label {
+  display: inline; /* Keeps "Tech Stack:" on the first line */
+  font-weight: bold;
+  margin-top: 30px;
+  padding-top: 50px;
+  /* font-style: italic; */
+}
+
+/* Description Content text styling */
+.description .tech {
+  display: block; /* Moves technologies to the next line */
+  margin-top: 0.2em;
+  /* font-style: italic; */
 }
 
 /* Button styling for buttons within the content ( WATCH DEMO & VIEW CODE )*/
@@ -777,10 +795,17 @@ hr {
   transition: 0.4s;
   letter-spacing: 2px;
   background-color: transparent;
-  border: 1px solid rgb(255, 187, 0);
+  /* border: 1px solid rgb(255, 255, 255); */
   color: #eee;
   backdrop-filter: blur(15px);
   border-radius: 10px;
+  box-shadow: 0 0 15px rgb(0, 0, 0);
+  
+}
+
+/* The icon for the buttons */
+.button i {
+  display: block;
 }
 
 /* Thumbnail section for displaying small preview images */
