@@ -1076,7 +1076,11 @@ hr {
     -webkit-tap-highlight-color: transparent; /* Prevent default mobile tap highlight */
   }
   
-  
+  /* Creates a gap and places both buttons evenly in the middle */
+  .button {
+    display: flex;
+    justify-content: space-evenly;
+  }
 
   .back-to-top {
     display: none;
