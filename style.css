@@ -1064,8 +1064,12 @@ hr {
     margin-top: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    color: ed;
     top: 7rem;
+  }
+
+  .button {
+    display: flex;
+    justify-content: space-evenly;
   }
 
   .back-to-top {
