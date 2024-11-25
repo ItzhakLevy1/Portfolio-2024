@@ -241,3 +241,9 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Projects section or back-to-top element not found.");
   }
 });
+
+// View code and Watch Demo Buttons functinality
+
+function watchDemoFunction() {
+  alert("watchDemoFunction");
+}

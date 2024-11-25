@@ -800,7 +800,6 @@ hr {
   backdrop-filter: blur(15px);
   border-radius: 10px;
   box-shadow: 0 0 15px rgb(0, 0, 0);
-  
 }
 
 /* The icon for the buttons */
@@ -1067,10 +1066,17 @@ hr {
     top: 7rem;
   }
 
-  .button {
-    display: flex;
-    justify-content: space-evenly;
+  /* Prevent buttons from changing color when clicked in mobile size screen */
+  .slider .list .item .button button:active {
+    box-shadow: none;
   }
+  
+  button,
+  button:active {
+    -webkit-tap-highlight-color: transparent; /* Prevent default mobile tap highlight */
+  }
+  
+  
 
   .back-to-top {
     display: none;
