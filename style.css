@@ -767,7 +767,7 @@ hr {
 /* Content container within each slide (e.g., title, description, buttons) */
 .slider .list .item .content {
   position: absolute;
-  top: 20%;
+  top: 10%;
   width: fit-content;
   left: 10%;
   transform: translateX(-50%);
@@ -818,12 +818,19 @@ hr {
 
 /* Button styling for buttons within the content ( WATCH DEMO & VIEW CODE )*/
 .slider .list .item .button {
-  display: grid;
-  grid-template-columns: repeat(2, 130px);
-  grid-template-rows: 40px;
-  gap: 5px;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* Stack the rows vertically */
+  align-items: center;    /* Center items horizontally */
+  gap: 10px;              /* Add space between rows */
 }
+
+.button-row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
 .slider .list .item .button button {
   border: none;
   background-color: #eee;
@@ -831,13 +838,17 @@ hr {
   font-weight: 500;
   cursor: pointer;
   transition: 0.4s;
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
   background-color: transparent;
   /* border: 1px solid rgb(255, 255, 255); */
   color: #eee;
   backdrop-filter: blur(15px);
   border-radius: 10px;
   box-shadow: 0 0 15px rgb(0, 0, 0);
+  padding: 0;
+  font-size: 16px;        /* Adjust font size */
+  width: 150px;
+  height: 50px;
 }
 
 /* The icon for the buttons */
@@ -845,9 +856,9 @@ hr {
   display: block;
 }
 
-/* Thumbnail section for displaying small preview images */
+
 .slider .list .item .button button:hover {
-  letter-spacing: 3px;
+  letter-spacing: 1px;
 }
 
 /* Thumbnail Section  */
