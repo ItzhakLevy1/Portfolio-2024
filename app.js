@@ -1,3 +1,4 @@
+/* Hamburger menu logic */
 const hamburger = document.querySelector(
   ".header .nav-bar .nav-list .hamburger"
 );
@@ -27,6 +28,8 @@ menu_item.forEach((item) => {
     mobile_menu.classList.toggle("active");
   });
 });
+/* End of Hamburger menu logic */
+
 
 // Get the modal
 var modal = document.getElementById("myModal");

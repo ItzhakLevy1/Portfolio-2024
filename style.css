@@ -20,6 +20,22 @@ a {
   align-items: center;
   justify-content: center;
 }
+
+/* Scrollable container to aplly auto completing scrolling once the user starts scroling*/
+.scroll-container {
+  scroll-snap-type: y mandatory; /* Enable vertical snapping */
+  overflow-y: scroll;           /* Enable scrolling */
+  height: 100vh;                /* Full height of viewport */
+  width: 100%;                  /* Full width of viewport */
+}
+
+/* Each section inside the scroll-container */
+.scroll-container section {
+  scroll-snap-align: start;     /* Align sections to the top of the viewport */
+  height: 100vh;                /* Each section takes the full viewport height */
+  width: 100%;                  /* Full width of viewport */
+}
+
 img {
   height: 100%;
   width: 100%;
