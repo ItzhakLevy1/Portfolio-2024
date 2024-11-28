@@ -1,3 +1,39 @@
+/* Toast message logic */
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.innerWidth <= 678) {
+    // Adjust the max width for mobile screens
+    toastr.info("Please use a desktop for a better user experience.");
+  }
+});
+
+toastr.options = {
+  closeButton: true,
+  progressBar: true,
+};
+
+toastr.options.closeHtml = '<button><i class="icon-off"></i></button>'; // Removes the close x button
+
+toastr.options.timeOut = 9000; // How long the toast will display without user interaction ( Milliseconds )
+
+/* End of Toast message logic */
+
+/* Darken everithing once the site has been loaded */
+document.addEventListener("DOMContentLoaded", () => {
+  // Create the dark overlay element
+  const overlay = document.createElement("div");
+  overlay.id = "dark-overlay";
+  document.body.appendChild(overlay);
+
+  // Remove the overlay after 5 seconds with a gradual fade-out
+  setTimeout(() => {
+    overlay.style.opacity = 0; // Start fading out
+    setTimeout(() => {
+      overlay.remove(); // Remove the overlay completely after fade-out
+    }, 2000); // Match the fade-out duration (2 seconds)
+  }, 3000); // Display the overlay for 5 seconds
+});
+/* End Darken everithing once the site has been loaded */
+
 /* Hamburger menu logic */
 const hamburger = document.querySelector(
   ".header .nav-bar .nav-list .hamburger"
@@ -29,7 +65,6 @@ menu_item.forEach((item) => {
   });
 });
 /* End of Hamburger menu logic */
-
 
 // Get the modal
 var modal = document.getElementById("myModal");

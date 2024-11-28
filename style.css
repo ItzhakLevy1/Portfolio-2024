@@ -21,20 +21,36 @@ a {
   justify-content: center;
 }
 
+/* Custom styling for Toastr toast notifications message*/
+#toast-container .toast {
+  width: 100%;
+  padding: 1em;
+  font-size: 2em;
+  border-radius: 8px;
+  margin-top: 4em;
+  display: flex;
+  text-align: center;
+  background-image: none !important; /* Remove icon from message */
+}
+
+/* End Custom styling for Toastr toast notifications message*/
+
 /* Scrollable container to aplly auto completing scrolling once the user starts scroling*/
 .scroll-container {
   scroll-snap-type: y mandatory; /* Enable vertical snapping */
-  overflow-y: scroll;           /* Enable scrolling */
-  height: 100vh;                /* Full height of viewport */
-  width: 100%;                  /* Full width of viewport */
+  overflow-y: scroll; /* Enable scrolling */
+  height: 100vh; /* Full height of viewport */
+  width: 100%; /* Full width of viewport */
+  scroll-behavior: smooth;
 }
 
 /* Each section inside the scroll-container */
 .scroll-container section {
-  scroll-snap-align: start;     /* Align sections to the top of the viewport */
-  width: 100%;                  /* Full width of viewport */
-    height: calc(100vh - env(safe-area-inset-bottom)); /* Adjust for bottom nav bar */
-
+  scroll-snap-align: start; /* Align sections to the top of the viewport */
+  width: 100%; /* Full width of viewport */
+  height: calc(
+    100vh - env(safe-area-inset-bottom)
+  ); /* Adjust for bottom nav bar */
 }
 
 img {
@@ -216,7 +232,6 @@ p {
   top: 0;
 }
 /* End Header section */
-
 
 .portfolioImage {
   border-radius: 10%;
@@ -821,8 +836,8 @@ hr {
   margin-top: 20px;
   display: flex;
   flex-direction: column; /* Stack the rows vertically */
-  align-items: center;    /* Center items horizontally */
-  gap: 10px;              /* Add space between rows */
+  align-items: center; /* Center items horizontally */
+  gap: 10px; /* Add space between rows */
 }
 
 .button-row {
@@ -846,7 +861,7 @@ hr {
   border-radius: 10px;
   box-shadow: 0 0 15px rgb(0, 0, 0);
   padding: 0;
-  font-size: 16px;        /* Adjust font size */
+  font-size: 16px; /* Adjust font size */
   width: 150px;
   height: 50px;
 }
@@ -855,7 +870,6 @@ hr {
 .button i {
   display: block;
 }
-
 
 .slider .list .item .button button:hover {
   letter-spacing: 1px;
@@ -1101,6 +1115,18 @@ hr {
 
 /* Mobile size screen */
 @media screen and (max-width: 678px) {
+  /* Dark overlay */
+  #dark-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    z-index: 9999; /* Ensure it appears above everything else */
+    opacity: 1; /* Fully visible initially */
+    transition: opacity 2s ease-in-out; /* Smooth fade-out */
+  }
   .portfolioImage {
     max-width: 100px;
     margin-top: 0rem;
@@ -1120,12 +1146,12 @@ hr {
   .slider .list .item .button button:active {
     box-shadow: none;
   }
-  
+
   button,
   button:active {
     -webkit-tap-highlight-color: transparent; /* Prevent default mobile tap highlight */
   }
-  
+
   /* Creates a gap and places both buttons evenly in the middle */
   .button {
     display: flex;
@@ -1164,7 +1190,6 @@ hr {
   .nextPrevArrows {
     margin-right: 3rem;
     top: 72%;
-    
   }
 
   .form-control,
