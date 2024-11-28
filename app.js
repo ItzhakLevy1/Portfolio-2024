@@ -63,20 +63,20 @@ function goToP2() {
 }
 /* <!-- back to top button --> */
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
+// window.onscroll = function () {
+//   scrollFunction();
+// };
 
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 500 ||
-    document.documentElement.scrollTop > 500
-  ) {
-    document.getElementById("myBtn").style.display = "block";
-  } else {
-    document.getElementById("myBtn").style.display = "none";
-  }
-}
+// function scrollFunction() {
+//   if (
+//     document.body.scrollTop > 500 ||
+//     document.documentElement.scrollTop > 500
+//   ) {
+//     document.getElementById("myBtn").style.display = "block";
+//   } else {
+//     document.getElementById("myBtn").style.display = "none";
+//   }
+// }
 
 // The back to top functionality using jQuery :
 
@@ -117,26 +117,26 @@ function goToCodePen() {
   window.open("https://codepen.io/Itzhak-levy/pens/public"); // Opens on a new tab
 }
 
-var mybutton = document.getElementById("backToTopBtn");
+// var mybutton = document.getElementById("backToTopBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
+// // When the user scrolls down 20px from the top of the document, show the button
+// window.onscroll = function () {
+//   scrollFunction();
+// };
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
+// function scrollFunction() {
+//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//     mybutton.style.display = "block";
+//   } else {
+//     mybutton.style.display = "none";
+//   }
+// }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+// // When the user clicks on the button, scroll to the top of the document
+// function topFunction() {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// }
 
 /***  Slider logic ***/
 
@@ -210,40 +210,40 @@ function prevSlide() {
 // }
 
 /*** Positioning of the Back to top button ***/
-document.addEventListener("DOMContentLoaded", () => {
-  const myElement = document.querySelector(".back-to-top");
-  const projectsSection = document.querySelector("#projects");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const myElement = document.querySelector(".back-to-top");
+//   const projectsSection = document.querySelector("#projects");
 
-  console.log("myElement: ", myElement); // Check if it exists
-  console.log("projectsSection: ", projectsSection); // Check if it exists
+//   console.log("myElement: ", myElement); // Check if it exists
+//   console.log("projectsSection: ", projectsSection); // Check if it exists
 
-  if (myElement && projectsSection) {
-    // Create an intersection observer
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            console.log("User entered the projects section");
-            myElement.style.position = "fixed";
-            myElement.style.bottom = "10px";
-            myElement.style.left = "10px";
-            myElement.style.display = "block"; // Ensure it's visible
-          } else {
-            console.log("User exited the projects section");
-            myElement.style.display = "none";
-          }
-        });
-      },
-      {
-        threshold: 0.1, // Adjust the threshold as needed
-      }
-    );
+//   if (myElement && projectsSection) {
+//     // Create an intersection observer
+//     const observer = new IntersectionObserver(
+//       (entries) => {
+//         entries.forEach((entry) => {
+//           if (entry.isIntersecting) {
+//             console.log("User entered the projects section");
+//             myElement.style.position = "fixed";
+//             myElement.style.bottom = "10px";
+//             myElement.style.left = "10px";
+//             myElement.style.display = "block"; // Ensure it's visible
+//           } else {
+//             console.log("User exited the projects section");
+//             myElement.style.display = "none";
+//           }
+//         });
+//       },
+//       {
+//         threshold: 0.1, // Adjust the threshold as needed
+//       }
+//     );
 
-    observer.observe(projectsSection);
-  } else {
-    console.error("Projects section or back-to-top element not found.");
-  }
-});
+//     observer.observe(projectsSection);
+//   } else {
+//     console.error("Projects section or back-to-top element not found.");
+//   }
+// });
 
 // View code and Watch Demo Buttons functinality
 
