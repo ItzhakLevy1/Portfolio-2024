@@ -794,12 +794,15 @@ hr {
   border-radius: 10px;
   border: 1px solid white;
   box-shadow: 0px 0px 18px 0 rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center horizontally */
 }
 
-/* Text styling for title and type */
+/* Text styling for title and type ( project name ) */
 .slider .list .item .content .title,
 .slider .list .item .content .type {
-  font-size: 5em;
+  font-size: 4em;
   font-weight: bold;
   line-height: 1.3em;
 }
@@ -808,10 +811,10 @@ hr {
   width: fit-content;
 }
 
-/* Description text styling */
+/* Tech stack */
 .description {
   font-size: 20px;
-  margin-top: 0.5em;
+  margin-top: 2em;
   margin-bottom: 1em;
 }
 
@@ -837,13 +840,14 @@ hr {
   display: flex;
   flex-direction: column; /* Stack the rows vertically */
   align-items: center; /* Center items horizontally */
-  gap: 10px; /* Add space between rows */
+  gap: 2em; /* Add space between rows */
 }
 
 .button-row {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  gap: 2em; /* adds spacing between the 2 WATCH DEMO btns */
 }
 
 .slider .list .item .button button {
@@ -1132,14 +1136,21 @@ hr {
     margin-top: 0rem;
   }
   .slider .list .item .content {
-    padding-right: 0;
     left: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-top: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    top: 7rem;
+  }
+
+  /* Tech stack */
+  .description {
+    text-align: center; /* Ensure multiline text is centered */
+  }
+
+  /* Text styling for title and type ( project name )*/
+  .slider .list .item .content .title,
+  .slider .list .item .content .type {
+   
+    text-align: center; /* Ensure multiline text is centered */
   }
 
   /* Prevent buttons from changing color when clicked in mobile size screen */
