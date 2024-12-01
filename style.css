@@ -79,24 +79,6 @@ p {
   color: rgb(255, 187, 0);
 }
 
-.cta {
-  display: inline-block;
-  padding: 10px 30px;
-  color: white;
-  background-color: transparent;
-  border: 2px solid rgb(255, 187, 0);
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  margin-top: 30px;
-  transition: 0.3s ease;
-  transition-property: background-color, color;
-  border-radius: 5px;
-}
-.cta:hover {
-  color: white;
-  background-color: rgb(255, 187, 0);
-}
 .brand h1 {
   font-size: 3rem;
   text-transform: uppercase;
@@ -117,7 +99,7 @@ p {
 }
 #header .header {
   min-height: 8vh;
-  background-color: rgba(31, 30, 30, 0.24);
+  /* background-color: rgba(31, 30, 30, 0.24); */
   transition: 0.3s ease background-color;
 }
 #header .nav-bar {
@@ -243,72 +225,69 @@ p {
 }
 
 #hero {
-  /* background-image: url(/images/19362653.jpg); */
-  background-size: cover;
-  background-position: right right;
-  position: relative;
-  z-index: 1;
-  /* text-align: center; */
+  background-color: #000;
 }
-#hero::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(0, 0, 0);
-  opacity: 0.9;
-  z-index: -1;
-}
+
 #hero .hero {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 50px;
-  justify-content: flex-start;
-}
-#hero h1 {
-  display: block;
-  width: fit-content;
-  font-size: 4rem;
-  position: relative;
-  color: transparent;
-  animation: text_reveal 0.5s ease forwards;
-  animation-delay: 1s;
-}
-#hero h1:nth-child(1) {
-  animation-delay: 1s;
-}
-#hero h1:nth-child(2) {
-  animation-delay: 2s;
-}
-#hero h1:nth-child(3) {
-  animation: text_reveal_name 0.5s ease forwards;
-  animation-delay: 3s;
-}
-#hero h1 span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0;
-  background-color: rgb(255, 187, 0);
-  animation: text_reveal_box 1s ease;
-  animation-delay: 0.5s;
-}
-#hero h1:nth-child(1) span {
-  animation-delay: 0.5s;
-}
-#hero h1:nth-child(2) span {
-  animation-delay: 1.5s;
-}
-#hero h1:nth-child(3) span {
-  animation-delay: 2.5s;
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center text */
+  background-color: #000;
 }
 
-#projects {
-  background-color: #111;
-  min-height: 100vh;
+#hero h1 {
+  display: block;
+  font-size: 4rem;
+  color: transparent;
+  animation: text_reveal 0.5s ease forwards;
+  text-align: center;
+}
+
+#hero p {
+  font-size: large;
+  color: white;
+  text-align: center;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+#hero .skillsContainer {
+  box-sizing: border-box;
+    color: #fff;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    padding: 2%;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 0px 0px 18px 0 rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero .ProjectsBtn {
+  display: inline-block;
+  padding: 10px 30px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid rgb(255, 187, 0);
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 30px;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
+  border-radius: 5px;
+}
+
+#hero .ProjectsBtn:hover {
+  color: white;
+  background-color: rgb(255, 187, 0);
 }
 
 /* End Projects section */
@@ -392,7 +371,7 @@ p {
 
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
-  .cta {
+  .ProjectsBtn {
     font-size: 2.5rem;
     padding: 20px 60px;
   }
@@ -1149,7 +1128,6 @@ hr {
   /* Text styling for title and type ( project name )*/
   .slider .list .item .content .title,
   .slider .list .item .content .type {
-   
     text-align: center; /* Ensure multiline text is centered */
   }
 
