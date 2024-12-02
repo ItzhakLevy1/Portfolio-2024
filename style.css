@@ -258,16 +258,16 @@ p {
 
 #hero .skillsContainer {
   box-sizing: border-box;
-    color: #fff;
-    background-color: transparent;
-    backdrop-filter: blur(15px);
-    padding: 2%;
-    border-radius: 10px;
-    border: 1px solid white;
-    box-shadow: 0px 0px 18px 0 rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  color: #fff;
+  background-color: transparent;
+  backdrop-filter: blur(15px);
+  padding: 2%;
+  border-radius: 10px;
+  border: 1px solid white;
+  box-shadow: 0px 0px 18px 0 rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #hero .ProjectsBtn {
@@ -795,15 +795,10 @@ hr {
   font-size: 20px;
   margin-top: 2em;
   margin-bottom: 1em;
-}
-
-/* Description Title text styling */
-.description .label {
-  display: inline; /* Keeps "Tech Stack:" on the first line */
-  font-weight: bold;
-  margin-top: 30px;
-  padding-top: 50px;
-  /* font-style: italic; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Description Content text styling */
@@ -811,6 +806,10 @@ hr {
   display: block; /* Moves technologies to the next line */
   margin-top: 0.2em;
   /* font-style: italic; */
+}
+
+.fa-solid fa-layer-group {
+  margin-right: 1em;
 }
 
 /* Button styling for buttons within the content ( WATCH DEMO & VIEW CODE )*/
