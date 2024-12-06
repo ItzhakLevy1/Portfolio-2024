@@ -218,7 +218,7 @@ p {
 .portfolioImage {
   border-radius: 10%;
   max-width: 100%;
-  /* margin: 20px 0; */
+  margin: 20px 0;
   margin-top: 2rem;
   max-width: 150px;
   width: 100%;
@@ -242,10 +242,11 @@ p {
 
 #hero h1 {
   display: block;
-  font-size: 4rem;
-  color: transparent;
-  animation: text_reveal 0.5s ease forwards;
-  text-align: center;
+  font-size: 3em;
+    text-align: center;
+    color: rgb(255, 187, 0);
+    background-color: rgba(255, 255, 255, 0);
+    text-shadow: rgb(255, 255, 255) -1px -1px 0px, rgb(255, 255, 255) 1px -1px 0px, rgb(255, 255, 255) -1px 1px 0px, rgb(255, 255, 255) 1px 1px 0px;
 }
 
 #hero p {
