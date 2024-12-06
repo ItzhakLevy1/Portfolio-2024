@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     toastr.info("Please use a desktop for a better user experience.");
   }
 });
-/* TEST */
+
 toastr.options = {
   closeButton: true,
   progressBar: true,
