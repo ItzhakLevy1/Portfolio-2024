@@ -13,7 +13,7 @@ toastr.options = {
 
 toastr.options.closeHtml = '<button><i class="icon-off"></i></button>'; // Removes the close x button
 
-toastr.options.timeOut = 9000; // How long the toast will display without user interaction ( Milliseconds )
+toastr.options.timeOut = 5000; // How long the toast will display without user interaction ( Milliseconds )
 
 /* End of Toast message logic */
 
