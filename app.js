@@ -17,6 +17,36 @@ toastr.options.timeOut = 5000; // How long the toast will display without user i
 
 /* End of Toast message logic */
 
+/* Icons */
+// document.addEventListener('DOMContentLoaded', () => {
+//   const skillsSections = document.querySelectorAll('.skillsContent'); // Select all skills sections
+
+//   skillsSections.forEach((section) => {
+//     const skillsList = section.querySelector('.skillsList');
+//     const skills = Array.from(skillsList.children);
+
+//     // If there's an odd number of skills
+//     if (skills.length % 4 !== 0) {
+//       // Find the longest text item
+//       const longestSkill = skills.reduce((longest, skill) =>
+//         skill.textContent.length > longest.textContent.length ? skill : longest
+//       );
+
+//       // Remove longest skill and prepend it in a new row
+//       skillsList.removeChild(longestSkill);
+
+//       const singleRow = document.createElement('ul');
+//       singleRow.classList.add('skillsList', 'single');
+//       singleRow.appendChild(longestSkill);
+
+//       // Insert the single-row list above the current list
+//       skillsList.parentElement.insertBefore(singleRow, skillsList);
+//     }
+//   });
+// });
+
+/* End of icons section */
+
 /* Darken everithing once the site has been loaded */
 document.addEventListener("DOMContentLoaded", () => {
   // Create the dark overlay element

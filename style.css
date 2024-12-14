@@ -241,13 +241,13 @@ p {
 }
 
 #hero h1 {
-  display: block;
+  /* display: block; */
   font-size: 3em;
-  text-align: center;
-  color: rgb(255, 255, 255);
+  /* text-align: center; */
+  color: gold;
   /* text-shadow: */ /*  rgb(255, 187, 0) -1px -1px 0px, rgb(255, 187, 0) 1px -1px 0px,
     rgb(255, 187, 0) -1px 1px 0px, rgb(255, 187, 0) 1px 1px 0px; */
-  -webkit-text-stroke: 1px rgb(255, 187, 0);
+  /* -webkit-text-stroke: 1px rgba(255, 255, 255, 0.555); */
   /* font-family: "Edu AU VIC WA NT Arrows", sans-serif; */
   /* font-family: "Sour Gummy", sans-serif; */
   font-family: "Rowdies";
@@ -261,18 +261,95 @@ p {
   margin: 1rem 0;
 }
 
+/* General Styling */
 #hero .skillsContainer {
   box-sizing: border-box;
   color: #fff;
   background-color: transparent;
   backdrop-filter: blur(15px);
-  padding: 2%;
+  padding: 10%;
   border-radius: 10px;
   border: 1px solid white;
   box-shadow: 0px 0px 18px 0 rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.skillsSection {
+  margin-top: 4rem;
+  width: 100%;
+  text-align: center;
+}
+
+.skillsSection h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: rgb(134, 134, 134);
+  /* padding-bottom: 0.5em;
+  padding-top: 0.5em; */
+  padding: 0.5em 1em;
+  margin-bottom: 0.8em;
+  background-color: #55555534;
+  border: 0.1px solid rgba(173, 216, 230, 0.082);
+  border-radius: 30px;
+  /* backdrop-filter: blur(15px); */
+  /* box-shadow: 0 0 15px rgba(121, 120, 120, 0.459); */
+  display: inline-block; /* Shrinks to fit the content */
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(
+    6,
+    1fr
+  ); /* Determins how many items in each line */
+  gap: 1.5rem;
+  justify-items: center;
+  margin: 0 auto;
+  display: inline-flex;
+}
+
+.techIcons {
+  width: 4rem;
+  height: 4rem;
+  transition: transform 0.2s ease;
+}
+
+.techIcons:hover {
+  transform: scale(1.2);
+}
+
+/* Tooltip Styling */
+.techIconWrapper[title] {
+  position: relative;
+}
+
+.techIconWrapper[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: 110%; /* Adjust to appear below the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.techIconWrapper[title]:hover::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+  z-index: 10;
 }
 
 #hero .ProjectsBtn {
@@ -1117,6 +1194,20 @@ hr {
   .portfolioImage {
     max-width: 100px;
     margin-top: 0rem;
+  }
+  #hero .skillsContainer {
+    padding: 20% 3%;
+    font-size: 1.5rem;
+    /* margin-bottom: 0.5rem; */
+    /* padding-bottom: 0em; */
+    padding-top: 0.5em;
+    /* margin-bottom: 0.8em; */
+    border: 0.5px solid lightblue;
+    border-radius: 30px;
+  }
+
+  .skillsSection {
+    margin-top: 1rem;
   }
   .slider .list .item .content {
     left: 0;
