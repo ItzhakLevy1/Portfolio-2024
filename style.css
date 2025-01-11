@@ -219,7 +219,8 @@ p {
   border-radius: 10%;
   max-width: 100%;
   margin: 20px 0;
-  margin-top: 2rem;
+  margin-top: 0rem;
+  margin-bottom: 0;
   max-width: 150px;
   width: 100%;
 }
@@ -242,14 +243,17 @@ p {
 
 #hero h1 {
   /* display: block; */
-  font-size: 3em;
+  font-size: 5em;
   /* text-align: center; */
-  color: gold;
-  /* text-shadow: */ /*  rgb(255, 187, 0) -1px -1px 0px, rgb(255, 187, 0) 1px -1px 0px,
-    rgb(255, 187, 0) -1px 1px 0px, rgb(255, 187, 0) 1px 1px 0px; */
-  /* -webkit-text-stroke: 1px rgba(255, 255, 255, 0.555); */
+  color: rgb(0, 0, 0);
+  text-shadow: rgba(255, 217, 113, 0.527) -1px -1px 0px,
+    rgba(255, 223, 136, 0.473) 1px -1px 0px,
+    rgba(255, 221, 128, 0.527) -1px 1px 0px,
+    rgba(255, 187, 0, 0.493) 1px 1px 0px;
+  /* -webkit-text-stroke: 1px rgb(255, 187, 0); */
   /* font-family: "Edu AU VIC WA NT Arrows", sans-serif; */
   /* font-family: "Sour Gummy", sans-serif; */
+  /* letter-spacing: 0.2em; */
   font-family: "Rowdies";
 }
 
@@ -264,10 +268,11 @@ p {
 /* General Styling */
 #hero .skillsContainer {
   box-sizing: border-box;
-  color: #fff;
-  background-color: transparent;
   backdrop-filter: blur(15px);
-  padding: 10%;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
   border-radius: 10px;
   border: 1px solid white;
   box-shadow: 0px 0px 18px 0 rgb(255, 255, 255);
@@ -277,37 +282,26 @@ p {
 }
 
 .skillsSection {
-  margin-top: 4rem;
-  width: 100%;
-  text-align: center;
+  margin-top: 3rem;
 }
 
 .skillsSection h2 {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: rgb(134, 134, 134);
-  /* padding-bottom: 0.5em;
-  padding-top: 0.5em; */
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  /* -webkit-text-stroke: 1px rgb(255, 255, 255); */
   padding: 0.5em 1em;
   margin-bottom: 0.8em;
-  background-color: #55555534;
-  border: 0.1px solid rgba(173, 216, 230, 0.082);
-  border-radius: 30px;
-  /* backdrop-filter: blur(15px); */
-  /* box-shadow: 0 0 15px rgba(121, 120, 120, 0.459); */
-  display: inline-block; /* Shrinks to fit the content */
+  box-shadow: 0 0 15px rgba(121, 120, 120, 0.459);
 }
 
 .skillsGrid {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(
     6,
     1fr
   ); /* Determins how many items in each line */
   gap: 1.5rem;
-  justify-items: center;
-  margin: 0 auto;
-  display: inline-flex;
 }
 
 .techIcons {
@@ -320,36 +314,10 @@ p {
   transform: scale(1.2);
 }
 
-/* Tooltip Styling */
-.techIconWrapper[title] {
-  position: relative;
-}
-
-.techIconWrapper[title]:hover::after {
-  content: attr(title);
-  position: absolute;
-  top: 110%; /* Adjust to appear below the icon */
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  white-space: nowrap;
-  z-index: 10;
-}
-
-.techIconWrapper[title]:hover::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 6px;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
-  z-index: 10;
+.techWithBackgroundColor {
+  background-color: white;
+  border-radius: 50%; /* Makes the background circular */
+  box-sizing: content-box; /* Ensures padding doesn't extend the icon */
 }
 
 #hero .ProjectsBtn {
@@ -1195,6 +1163,13 @@ hr {
     max-width: 100px;
     margin-top: 0rem;
   }
+
+  /* Hero */
+  #hero h1 {
+    font-size: 5rem;
+  }
+  /* End Hero */
+
   #hero .skillsContainer {
     padding: 20% 3%;
     font-size: 1.5rem;
@@ -1209,6 +1184,22 @@ hr {
   .skillsSection {
     margin-top: 1rem;
   }
+
+  /* Tooltip Styling */
+  .techIconWrapper[title] {
+    position: relative;
+  }
+
+  .techIconWrapper[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: 110%; /* Adjust to appear below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 0.9rem;
+  }
+
   .slider .list .item .content {
     left: 0;
     margin-left: 1rem;
