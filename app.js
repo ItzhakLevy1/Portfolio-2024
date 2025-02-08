@@ -312,6 +312,26 @@ function prevSlide() {
 
 // View code and Watch Demo Buttons functinality
 
-function watchDemoFunction() {
-  alert("watchDemoFunction");
+function watchDemoParadisianHotel() {
+  window.open("https://youtu.be/odJSop3P9WE", "_blank");
 }
+
+function viewCodeParadisianHotel() {
+  window.open("https://github.com/ItzhakLevy1/paradisian-hotel", "_blank");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  let hasScrolledToProjects = false;
+  window.addEventListener("scroll", function () {
+    const projectsSection = document.getElementById("projects");
+    const rect = projectsSection.getBoundingClientRect();
+    if (
+      !hasScrolledToProjects &&
+      rect.top <= window.innerHeight &&
+      rect.bottom >= 0
+    ) {
+      alert("You have reached the Projects section!");
+      hasScrolledToProjects = true;
+    }
+  });
+});

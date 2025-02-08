@@ -185,11 +185,11 @@
                   <div class="button">
                     <!-- First row with the two WATCH DEMO buttons -->
                     <div class="button-row">
-                      <button onclick="watchDemoFunction()"><i class="fa-solid fa-video"></i>WATCH DEMO EN</button>
-                      <button onclick="watchDemoFunction()"><i class="fa-solid fa-video"></i>WATCH DEMO HE</button>
+                      <button onclick="watchDemoParadisianHotel()"><i class="fa-solid fa-video"></i>WATCH DEMO</button>
+                      <!-- <button onclick="watchDemoFunction()"><i class="fa-solid fa-video"></i>WATCH DEMO HE</button> -->
                     </div>
                     <!-- Second row with the VIEW CODE button -->
-                    <button><i class="fa-solid fa-code"></i>VIEW CODE</button>
+                    <button onclick="viewCodeParadisianHotel()"><i class="fa-solid fa-code"></i>VIEW CODE</button>
                   </div>   
               </div>
           </div>
@@ -351,6 +351,17 @@
   <script defer src="https://kit.fontawesome.com/252af1c3af.js" crossorigin="anonymous"></script>
   <!-- Include Toastr JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      window.addEventListener('scroll', function() {
+        const projectsSection = document.getElementById('projects');
+        const rect = projectsSection.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          console.log('Projects section is in view.');
+          alert('Projects section is in view!');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
