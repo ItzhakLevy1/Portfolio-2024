@@ -344,7 +344,7 @@ function prevSlide() {
 // View code and Watch Demo Buttons functionality
 
 function watchDemoParadisianHotel() {
-  window.open("https://youtu.be/odJSop3P9WE", "_blank");
+  window.open("https://youtu.be/Pq3pHrvPJgo", "_blank");
 }
 
 function viewCodeParadisianHotel() {
