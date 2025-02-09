@@ -1,9 +1,40 @@
 /* Toast message logic */
 document.addEventListener("DOMContentLoaded", () => {
   if (window.innerWidth <= 678) {
-    // Adjust the max width for mobile screens
     toastr.info("Please use a desktop for a better user experience.");
   }
+
+  const projectsSection = document.querySelector("#projects");
+  const tooltip = $("#tooltip"); // Cache the tooltip element
+
+  if (!projectsSection) {
+    console.error("Element with ID 'projects' not found.");
+    return;
+  }
+
+  if (tooltip.length === 0) {
+    console.error("Tooltip element with ID 'tooltip' not found.");
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log("You have reached the Projects section!");
+
+          setTimeout(() => {
+            tooltip.fadeIn(1000).delay(4000).fadeOut(1000);
+          }, 2000);
+
+          observer.disconnect(); // Stop observing after triggering
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  observer.observe(projectsSection);
 });
 
 toastr.options = {
@@ -310,7 +341,7 @@ function prevSlide() {
 //   }
 // });
 
-// View code and Watch Demo Buttons functinality
+// View code and Watch Demo Buttons functionality
 
 function watchDemoParadisianHotel() {
   window.open("https://youtu.be/odJSop3P9WE", "_blank");
@@ -319,19 +350,3 @@ function watchDemoParadisianHotel() {
 function viewCodeParadisianHotel() {
   window.open("https://github.com/ItzhakLevy1/paradisian-hotel", "_blank");
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  let hasScrolledToProjects = false;
-  window.addEventListener("scroll", function () {
-    const projectsSection = document.getElementById("projects");
-    const rect = projectsSection.getBoundingClientRect();
-    if (
-      !hasScrolledToProjects &&
-      rect.top <= window.innerHeight &&
-      rect.bottom >= 0
-    ) {
-      alert("You have reached the Projects section!");
-      hasScrolledToProjects = true;
-    }
-  });
-});
