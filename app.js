@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
           console.log("You have reached the Projects section!");
 
           setTimeout(() => {
-            tooltip.fadeIn(1000).delay(4000).fadeOut(1000);
+            tooltip.fadeIn(1000).delay(4000) /* .fadeOut(1000) */;
           }, 2000);
 
           observer.disconnect(); // Stop observing after triggering
@@ -270,11 +270,13 @@ function moveSlider(direction) {
 
 // These functions will be called directly from the HTML
 function nextSlide() {
-  moveSlider("next");
+  moveSlider("next"); // Move the slider to the next slide
+  tooltip.style.display = "none"; // Hide the tooltip
 }
 
 function prevSlide() {
-  moveSlider("prev");
+  moveSlider("prev"); // Move the slider to the previous slide
+  tooltip.style.display = "none"; // Hide the tooltip
 }
 
 /*** Automatic scrolling ***/
