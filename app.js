@@ -352,3 +352,7 @@ function watchDemoParadisianHotel() {
 function viewCodeParadisianHotel() {
   window.open("https://github.com/ItzhakLevy1/paradisian-hotel", "_blank");
 }
+
+function watchDemoChromeExtension() {
+  window.open("https://www.youtube.com/watch?v=GM9jsguDZ-s", "_blank");
+}
