@@ -356,3 +356,11 @@ function viewCodeParadisianHotel() {
 function watchDemoChromeExtension() {
   window.open("https://www.youtube.com/watch?v=GM9jsguDZ-s", "_blank");
 }
+
+function goToProjectLevysAIChat() {
+  window.open("https://classy-malabi-db63fc.netlify.app/", "_blank");
+}
+
+function viewCodeLevysAIChat() {
+  window.open("https://github.com/ItzhakLevy1/Gemini-AI-FULL-STACK-PROJECT", "_blank");
+}
